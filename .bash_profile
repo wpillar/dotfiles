@@ -3,7 +3,7 @@ alias denv='eval "$(docker-machine env default)"'
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias dkill='docker kill "$(docker ps -q)"'
 
-source '/Users/will/.git-completion.sh'
+source '/Users/will/git/dotfiles/.git-completion.sh'
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTAT=1
