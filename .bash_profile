@@ -9,7 +9,6 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTAT=1
 
 export PS1='[\u@graze \[\e[0;34m\]$(pwd | cut -c13-)\[\e[0;35m\]$(__git_ps1 " (%s)")\[\e[0m]\]\$ '
-export DEVELOPER_EMAIL=will.pillar@graze.com
 
 function docker-cleanup () {
   EXITED=$(docker ps -q -f status=exited)
