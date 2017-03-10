@@ -1,7 +1,9 @@
 alias st='git status'
-alias denv='eval "$(docker-machine env default)"'
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
+
+alias denv='eval "$(docker-machine env default)"'
 alias dkill='docker kill "$(docker ps -q)"'
+alias dps='docker ps'
 
 source '/Users/will/git/dotfiles/.git-completion.sh'
 
