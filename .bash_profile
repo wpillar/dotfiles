@@ -10,7 +10,7 @@ source '/Users/will/git/dotfiles/.git-completion.sh'
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTAT=1
 
-export PS1="\[\u@graze \[\e[0;34m\]\w\[\e[0;35m\]\$(__git_ps1)\[\e[0m]\] \$ "
+export PS1="\[\u@graze \[\e[0;34m\]\w\[\e[0;35m\]\$(__git_ps1)\[\e[0m\] \$ "
 
 function docker-cleanup () {
   EXITED=$(docker ps -q -f status=exited)
