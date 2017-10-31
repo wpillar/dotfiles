@@ -2,7 +2,7 @@ alias st='git status'
 alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 
 alias denv='eval "$(docker-machine env default)"'
-alias dkill='docker kill "$(docker ps -q)"'
+alias dkill='docker kill $(docker ps -q)'
 alias dps='docker ps'
 
 source '/Users/will/git/dotfiles/.git-completion.sh'
@@ -10,7 +10,7 @@ source '/Users/will/git/dotfiles/.git-completion.sh'
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTAT=1
 
-export PS1='[\u@graze \[\e[0;34m\]$(pwd | cut -c13-)\[\e[0;35m\]$(__git_ps1 " (%s)")\[\e[0m]\]\$ '
+export PS1="\[\u@graze \[\e[0;34m\]\w\[\e[0;35m\]\$(__git_ps1)\[\e[0m]\] \$ "
 
 function docker-cleanup () {
   EXITED=$(docker ps -q -f status=exited)
